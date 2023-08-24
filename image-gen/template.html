@@ -7,7 +7,7 @@
     #{number}
   </div>
   <div class="content">
-    <div class="image">{img}</div>
+    <img src="{image}" />
     <div class="info">
       <div class="box">
         <div class="box-title">💰 Price</div>
@@ -19,19 +19,21 @@
       <div class="box">
         <div class="box-title">💎 Rarity</div>
         <div class="box-content">
-          <div><b>{position}</b> / {count}</div>
+          <div><b>{position}</b> / {total}</div>
         </div>
       </div>
       <div class="box">
         <div class="box-title">📈 Last 24 hours</div>
         <div class="box-content">
           <div>Sold for</div>
-          <div><b>{sold}</b> ETH</div>
+          <div class="big"><b>{sold}</b> ETH</div>
         </div>
       </div>
     </div>
   </div>
   <style lang="css">
+    @import url("https://fonts.googleapis.com/css2?family=Inter");
+
     :root {
       --background: #222222;
       --surface: #303030;
@@ -46,6 +48,7 @@
       display: flex;
       flex-direction: column;
       gap: 15px;
+      font-family: "Inter";
     }
 
     .header {
@@ -61,7 +64,7 @@
       font-size: 28px;
       display: flex;
       flex-direction: row;
-      gap: 2px;
+      gap: 4px;
     }
 
     .rectangle {
@@ -76,11 +79,12 @@
       gap: 15px;
     }
 
-    .image {
+    img {
       border: 7px solid var(--surface);
       border-radius: 25px;
       width: 400px;
       height: 400px;
+      object-fit: contain;
     }
 
     .info {
@@ -94,6 +98,9 @@
       border-radius: 10px;
       width: 220px;
       overflow: hidden;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
     }
 
     .box-title {
@@ -110,6 +117,11 @@
       color: #ffffff;
       padding: 15px;
       gap: 8px;
+      flex-grow: 1;
+    }
+
+    .big {
+      font-size: 20px;
     }
   </style>
 </div>
