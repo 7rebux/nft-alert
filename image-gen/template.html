@@ -2,31 +2,31 @@
   <div class="header">
     <div class="title">
       <div class="rectangle"></div>
-      {title}
+      {{title}}
     </div>
-    #{number}
+    #{{number}}
   </div>
   <div class="content">
-    <img src="{image}" />
+    <img src="{{image}}" />
     <div class="info">
       <div class="box">
         <div class="box-title">💰 Price</div>
         <div class="box-content">
-          <div>{price1}</div>
-          <div>{price2}</div>
+          <div>{{price1}}</div>
+          <div>{{price2}}</div>
         </div>
       </div>
       <div class="box">
         <div class="box-title">💎 Rarity</div>
         <div class="box-content">
-          <div><b>{position}</b> / {total}</div>
+          <div><b>{{position}}</b> / {{total}}</div>
         </div>
       </div>
       <div class="box">
         <div class="box-title">📈 Last 24 hours</div>
         <div class="box-content">
           <div>Sold for</div>
-          <div class="big"><b>{sold}</b> ETH</div>
+          <div class="big"><b>{{sold}}</b> ETH</div>
         </div>
       </div>
     </div>
